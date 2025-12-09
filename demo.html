@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Restore - Premium Health Products</title>
+    <meta name="description" content="Discover premium collagen supplements, natural health products, and wellness solutions at Health Restore. Shop quality supplements for better health.">
+    <style>
+        /* Import Montserrat font */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+        :root {
+            --color-primary: #2f8a3b;
+            --color-text: #1f1f1f;
+            --color-accent: #f2a900;
+            --color-muted: #6b7280;
+            --color-bg: #ffffff;
+            --radius-soft: 12px;
+            --shadow-sm: 0 6px 18px rgba(17, 24, 39, 0.06);
+            --shadow-md: 0 12px 30px rgba(17, 24, 39, 0.10);
+            --space-section-desktop: 28px;
+            --space-section-mobile: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Cart Icon */
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            padding: 0.5rem;
+            margin-left: 1rem;
+            border-radius: var(--radius-soft);
+            transition: background-color 0.2s ease;
+        }
+
+        .cart-icon:hover {
+            background-color: rgba(47, 138, 59, 0.1);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--color-accent);
+            color: var(--color-text);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Cart Modal */
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .cart-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-content {
+            background: #fff;
+            border-radius: var(--radius-soft);
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        .cart-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .cart-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--color-muted);
+        }
+
+        .cart-items {
+            padding: 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item-image {
+            width: 60px;
+            height: 60px;
+            background: #f3f4f6;
+            border-radius: var(--radius-soft);
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: var(--color-muted);
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .cart-item-price {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        .cart-item-remove {
+            background: none;
+            border: none;
+            color: var(--color-muted);
+            cursor: pointer;
+            font-size: 1.25rem;
+        }
+
+        .cart-item-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .cart-item-controls button {
+            background: #f3f4f6;
+            border: 1px solid #d1d5db;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .cart-item-controls button:hover {
+            background: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+        }
+
+        .cart-item-controls span {
+            min-width: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .cart-footer {
+            padding: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .cart-checkout {
+            width: 100%;
+            background: var(--color-primary);
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: var(--radius-soft);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .cart-checkout:hover {
+            background: #256c2e;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            color: var(--color-muted);
+        }
+
+        .cart-empty svg {
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 1rem;
+            color: #d1d5db;
+        }
+
+        /* Checkout Modal */
+        .checkout-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .checkout-modal.show {
+            display: block;
+        }
+
+        .checkout-content {
+            background: #fff;
+            margin: 2rem auto;
+            max-width: 800px;
+            border-radius: var(--radius-soft);
+            overflow: hidden;
+            animation: slideUp 0.3s ease;
+        }
+
+        .checkout-header {
+            background: var(--color-primary);
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .checkout-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .checkout-body {
+            padding: 2rem;
+        }
+
+        .checkout-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .form-input {
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: var(--radius-soft);
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(47, 138, 59, 0.1);
+        }
+
+        .checkout-summary {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: var(--radius-soft);
+            margin-bottom: 1.5rem;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-item:last-child {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 0.5rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+
+        .payment-methods {
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: var(--radius-soft);
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: border-color 0.2s ease;
+        }
+
+        .payment-method:hover,
+        .payment-method.selected {
+            border-color: var(--color-primary);
+        }
+
+        .payment-method input {
+            margin-right: 0.75rem;
+        }
+
+        .checkout-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+
+        .btn-secondary {
+            background: #6b7280;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-soft);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+
+        .checkout-success {
+            display: none;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .checkout-success svg {
+            width: 4rem;
+            height: 4rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .checkout-success h3 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .checkout-actions {
+                flex-direction: column;
+            }
+
+            .cart-content {
+                width: 95%;
+                margin: 1rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 3vw, 36px);
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--color-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--color-primary);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-soft);
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            padding: var(--space-section-desktop);
+        }
+
+        .features-intro {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .features-intro h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .features-intro p {
+            font-size: 1.125rem;
+            color: var(--color-muted);
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            border-radius: var(--radius-soft);
+            border: 1px solid #e5e7eb;
+            padding: 1.5rem;
+            text-align: center;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .feature-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .feature-card svg {
+            width: 3rem;
+            height: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--color-muted);
+        }
+
+        /* Product Cards */
+        .products-section {
+            padding: var(--space-section-desktop);
+            background: #f8f9fa;
+        }
+
+        .products-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: var(--radius-soft);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-muted);
+            font-size: 0.875rem;
+            position: relative;
+        }
+
+        .product-wishlist {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .product-content {
+            padding: 1rem;
+        }
+
+        .product-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-price {
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+
+        .product-cta {
+            width: 100%;
+            background: var(--color-primary);
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: var(--radius-soft);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .product-cta:hover {
+            background: #256c2e;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-text);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .features-grid,
+            .products-section {
+                padding: var(--space-section-mobile);
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @media (prefers-reduced-motion: no-preference) {
+            .animate-fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeInUp 0.6s ease-out forwards;
+            }
+
+            @keyframes fadeInUp {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Health Restore</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="cart-icon" onclick="toggleCart()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Discover the Benefits of Collagen for Yourself</h1>
+            <p>Premium natural health supplements designed to support your wellness journey with scientifically-backed ingredients.</p>
+            <a href="#products" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-grid">
+        <div class="container">
+            <div class="features-intro">
+                <h2>Why Choose Health Restore?</h2>
+                <p>Experience the difference with our premium health products and exceptional service.</p>
+            </div>
+
+            <div class="features-list">
+                <div class="feature-card animate-fade-in">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
+                    </svg>
+                    <h3>Natural Ingredients</h3>
+                    <p>Premium, natural ingredients sourced from trusted suppliers worldwide.</p>
+                </div>
+
+                <div class="feature-card animate-fade-in">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.031 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                    </svg>
+                    <h3>Quality Assured</h3>
+                    <p>Every product undergoes rigorous testing for purity and effectiveness.</p>
+                </div>
+
+                <div class="feature-card animate-fade-in">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.519l2.74-1.22m0 0-5.94-2.28m5.94 2.28-2.28 5.941" />
+                    </svg>
+                    <h3>Expert Support</h3>
+                    <p>Our wellness experts are here to guide your health journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card animate-fade-in">
+                    <div class="product-image">
+                        <div class="product-wishlist">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px; height: 20px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 3.012-.715-1.886-2.377-3.012-4.312-3.012C3.599 3.75 1.5 5.765 1.5 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </div>
+                        Digestive Enzymes
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Solgar® Digestive Enzymes Tablets</h3>
+                        <div class="product-price">R319.00</div>
+                        <button class="product-cta">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card animate-fade-in">
+                    <div class="product-image">
+                        <div class="product-wishlist">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px; height: 20px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 3.012-.715-1.886-2.377-3.012-4.312-3.012C3.599 3.75 1.5 5.765 1.5 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </div>
+                        Magnesium Complex
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Coyne Biomax® Magnesium Complex</h3>
+                        <div class="product-price">R277.00</div>
+                        <button class="product-cta">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card animate-fade-in">
+                    <div class="product-image">
+                        <div class="product-wishlist">
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 20px; height: 20px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 3.012-.715-1.886-2.377-3.012-4.312-3.012C3.599 3.75 1.5 5.765 1.5 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg>
+                        </div>
+                        Curcumin Supplement
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Coyne Bio-Curcumin® with BCM-95®</h3>
+                        <div class="product-price">From R290.00</div>
+                        <button class="product-cta">Select Options</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3 class="cart-title">Shopping Cart</h3>
+                <button class="cart-close" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <div class="cart-empty">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2 8m2-8h10m0 0v8a2 2 0 0 0 2 2H9a2 2 0 0 0-2-2v-8m0 0L5.4 5m4.6 0L9 13m0 0l2 8"/>
+                    </svg>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+            <div class="cart-footer" id="cart-footer" style="display: none;">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total">R0.00</span>
+                </div>
+                <button class="cart-checkout" onclick="openCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h2>Secure Checkout</h2>
+            </div>
+            <div class="checkout-body">
+                <div class="checkout-summary">
+                    <div class="summary-item">
+                        <span>Subtotal:</span>
+                        <span id="checkout-subtotal">R0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping:</span>
+                        <span>FREE</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Total:</span>
+                        <span id="checkout-total">R0.00</span>
+                    </div>
+                </div>
+
+                <form class="checkout-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Shipping Address</label>
+                        <input type="text" class="form-input" placeholder="Street address" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">City</label>
+                            <input type="text" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Postal Code</label>
+                            <input type="text" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="payment-methods">
+                        <h4>Payment Method</h4>
+                        <label class="payment-method selected">
+                            <input type="radio" name="payment" value="card" checked>
+                            <span>Credit/Debit Card</span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="paypal">
+                            <span>PayPal</span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="bank">
+                            <span>Bank Transfer</span>
+                        </label>
+                    </div>
+
+                    <div class="checkout-actions">
+                        <button type="button" class="btn-secondary" onclick="closeCheckout()">Back to Cart</button>
+                        <button type="submit" class="cart-checkout" onclick="completeOrder(event)">Complete Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="checkout-modal" id="success-modal">
+        <div class="checkout-content">
+            <div class="checkout-success">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <h3>Order Confirmed!</h3>
+                <p>Thank you for your order. We'll send you a confirmation email shortly.</p>
+                <p><strong>Order #HR-2024-001</strong></p>
+                <button class="cart-checkout" onclick="closeAllModals()" style="margin-top: 1rem;">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Health Restore. Premium natural health supplements.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Cart functionality
+        let cart = [];
+        let cartCount = 0;
+
+        // Sample products data
+        const products = [
+            {
+                id: 1,
+                name: 'Solgar® Digestive Enzymes Tablets',
+                price: 319.00,
+                image: 'Digestive Enzymes'
+            },
+            {
+                id: 2,
+                name: 'Coyne Biomax® Magnesium Complex',
+                price: 277.00,
+                image: 'Magnesium Complex'
+            },
+            {
+                id: 3,
+                name: 'Coyne Bio-Curcumin® with BCM-95®',
+                price: 290.00,
+                image: 'Curcumin Supplement'
+            }
+        ];
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                const existingItem = cart.find(item => item.id === productId);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({ ...product, quantity: 1 });
+                }
+                updateCart();
+                showNotification(`${product.name} added to cart!`);
+            }
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCart();
+        }
+
+        function updateQuantity(productId, change) {
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    removeFromCart(productId);
+                } else {
+                    updateCart();
+                }
+            }
+        }
+
+        function updateCart() {
+            cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cart-count').textContent = cartCount;
+
+            const cartItems = document.getElementById('cart-items');
+            const cartFooter = document.getElementById('cart-footer');
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="cart-empty">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2 8m2-8h10m0 0v8a2 2 0 0 0 2 2H9a2 2 0 0 0-2-2v-8m0 0L5.4 5m4.6 0L9 13m0 0l2 8"/>
+                        </svg>
+                        <p>Your cart is empty</p>
+                    </div>
+                `;
+                cartFooter.style.display = 'none';
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div class="cart-item-image">${item.image}</div>
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">${item.name}</div>
+                            <div class="cart-item-price">R${item.price.toFixed(2)}</div>
+                            <div class="cart-item-controls">
+                                <button onclick="updateQuantity(${item.id}, -1)">-</button>
+                                <span>${item.quantity}</span>
+                                <button onclick="updateQuantity(${item.id}, 1)">+</button>
+                            </div>
+                        </div>
+                        <button class="cart-item-remove" onclick="removeFromCart(${item.id})">&times;</button>
+                    </div>
+                `).join('');
+
+                const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                document.getElementById('cart-total').textContent = `R${total.toFixed(2)}`;
+                cartFooter.style.display = 'block';
+            }
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.toggle('show');
+        }
+
+        function openCheckout() {
+            document.getElementById('cart-modal').classList.remove('show');
+            document.getElementById('checkout-modal').classList.add('show');
+
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            document.getElementById('checkout-subtotal').textContent = `R${total.toFixed(2)}`;
+            document.getElementById('checkout-total').textContent = `R${total.toFixed(2)}`;
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkout-modal').classList.remove('show');
+            document.getElementById('cart-modal').classList.add('show');
+        }
+
+        function completeOrder(event) {
+            event.preventDefault();
+            document.getElementById('checkout-modal').classList.remove('show');
+            document.getElementById('success-modal').classList.add('show');
+            cart = [];
+            updateCart();
+        }
+
+        function closeAllModals() {
+            document.getElementById('cart-modal').classList.remove('show');
+            document.getElementById('checkout-modal').classList.remove('show');
+            document.getElementById('success-modal').classList.remove('show');
+        }
+
+        function showNotification(message) {
+            // Simple notification - could be enhanced with a proper notification system
+            alert(message);
+        }
+
+        // Close modals when clicking outside
+        document.addEventListener('click', function(event) {
+            const cartModal = document.getElementById('cart-modal');
+            const checkoutModal = document.getElementById('checkout-modal');
+            const successModal = document.getElementById('success-modal');
+
+            if (event.target === cartModal) {
+                cartModal.classList.remove('show');
+            }
+            if (event.target === checkoutModal) {
+                checkoutModal.classList.remove('show');
+            }
+            if (event.target === successModal) {
+                successModal.classList.remove('show');
+            }
+        });
+
+        // Initialize cart buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click handlers to "Add to Cart" buttons
+            document.querySelectorAll('.product-cta').forEach((button, index) => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    addToCart(index + 1); // Product IDs start from 1
+                });
+            });
+
+            // Animation trigger
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

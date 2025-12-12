@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Blog Homepage -->
+  <url>
+    <loc>https://healthrestore.co.za/blog/</loc>
+    <lastmod>2024-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Digestive Health Articles -->
+  <url>
+    <loc>https://healthrestore.co.za/blog/benefits-of-digestive-enzymes/</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/digestive-enzymes-guide.jpg</image:loc>
+      <image:title>The Complete Guide to Digestive Enzymes: Benefits and Uses</image:title>
+      <image:caption>Learn how digestive enzymes can improve your gut health and nutrient absorption</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/probiotics-for-gut-health/</loc>
+    <lastmod>2024-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/probiotics-guide.jpg</image:loc>
+      <image:title>Probiotics for Gut Health: What You Need to Know</image:title>
+      <image:caption>Understanding the role of probiotics in maintaining a healthy digestive system</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/l-glutamine-for-gut-healing/</loc>
+    <lastmod>2024-12-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/l-glutamine-benefits.jpg</image:loc>
+      <image:title>L-Glutamine: The Amino Acid That Heals Your Gut</image:title>
+      <image:caption>Discover how L-glutamine supports gut lining repair and digestive health</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Joint Health Articles -->
+  <url>
+    <loc>https://healthrestore.co.za/blog/collagen-for-joint-health/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/collagen-joints.jpg</image:loc>
+      <image:title>Collagen Supplements for Joint Health: What the Science Says</image:title>
+      <image:caption>Research-backed information about collagen for joint pain and mobility</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/glucosamine-chondroitin-effectiveness/</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/glucosamine-study.jpg</image:loc>
+      <image:title>Glucosamine and Chondroitin: Do They Really Work for Joint Pain?</image:title>
+      <image:caption>Evidence-based review of glucosamine supplements for arthritis and joint health</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/curcumin-for-inflammation/</loc>
+    <lastmod>2024-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/curcumin-anti-inflammatory.jpg</image:loc>
+      <image:title>Curcumin for Inflammation: Natural Anti-Inflammatory Benefits</image:title>
+      <image:caption>How curcumin supplements can help reduce inflammation and joint pain</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Immune Support Articles -->
+  <url>
+    <loc>https://healthrestore.co.za/blog/vitamin-c-immune-system/</loc>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/vitamin-c-immunity.jpg</image:loc>
+      <image:title>Vitamin C and Immune Health: Boosting Your Body's Defenses</image:title>
+      <image:caption>The role of vitamin C in supporting immune system function</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/zinc-for-immunity/</loc>
+    <lastmod>2024-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/zinc-immunity.jpg</image:loc>
+      <image:title>Zinc and Immune Function: Essential Mineral for Health</image:title>
+      <image:caption>Understanding zinc's critical role in immune system support</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Magnesium Articles -->
+  <url>
+    <loc>https://healthrestore.co.za/blog/magnesium-benefits-health/</loc>
+    <lastmod>2024-12-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/magnesium-benefits.jpg</image:loc>
+      <image:title>Magnesium Benefits: Why This Mineral Is Essential for Health</image:title>
+      <image:caption>Comprehensive guide to magnesium's role in over 300 bodily functions</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/magnesium-glycinate-vs-citrate/</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/magnesium-forms.jpg</image:loc>
+      <image:title>Magnesium Glycinate vs Citrate: Which Form Is Best?</image:title>
+      <image:caption>Comparing different magnesium supplement forms for optimal absorption</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Stress & Sleep Articles -->
+  <url>
+    <loc>https://healthrestore.co.za/blog/ashwagandha-for-stress/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/ashwagandha-stress.jpg</image:loc>
+      <image:title>Ashwagandha for Stress Relief: Ancient Herb, Modern Science</image:title>
+      <image:caption>How ashwagandha helps manage stress and cortisol levels</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/magnesium-for-sleep/</loc>
+    <lastmod>2024-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/magnesium-sleep.jpg</image:loc>
+      <image:title>Magnesium for Sleep: Natural Sleep Aid That Really Works</image:title>
+      <image:caption>The science behind magnesium's role in better sleep quality</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Skin Health Articles -->
+  <url>
+    <loc>https://healthrestore.co.za/blog/collagen-for-skin/</loc>
+    <lastmod>2024-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/collagen-skin.jpg</image:loc>
+      <image:title>Collagen for Skin Health: Anti-Aging Benefits Backed by Science</image:title>
+      <image:caption>How collagen supplements can improve skin elasticity and reduce wrinkles</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/biotin-for-hair-skin-nails/</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/biotin-benefits.jpg</image:loc>
+      <image:title>Biotin for Hair, Skin, and Nails: Beauty from Within</image:title>
+      <image:caption>The role of biotin in maintaining healthy hair, skin, and nails</image:caption>
+    </image:image>
+  </url>
+
+  <!-- General Health Articles -->
+  <url>
+    <loc>https://healthrestore.co.za/blog/supplement-safety-guide/</loc>
+    <lastmod>2024-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/supplement-safety.jpg</image:loc>
+      <image:title>Supplement Safety Guide: What You Need to Know</image:title>
+      <image:caption>Important safety considerations when taking dietary supplements</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/reading-supplement-labels/</loc>
+    <lastmod>2024-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://healthrestore.co.za/wp-content/uploads/2024/12/supplement-labels.jpg</image:loc>
+      <image:title>How to Read Supplement Labels: Understanding What You're Buying</image:title>
+      <image:caption>Essential guide to understanding supplement facts and ingredient lists</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Category Pages -->
+  <url>
+    <loc>https://healthrestore.co.za/blog/category/digestive-health/</loc>
+    <lastmod>2024-12-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/category/joint-health/</loc>
+    <lastmod>2024-12-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/category/immune-support/</loc>
+    <lastmod>2024-12-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/category/skin-hair-nails/</loc>
+    <lastmod>2024-12-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://healthrestore.co.za/blog/category/general-health/</loc>
+    <lastmod>2024-12-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

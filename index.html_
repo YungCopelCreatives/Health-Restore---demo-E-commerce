@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to your New Account - InterWeb SA</title>
+  <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://interwebsa.com/accountfunctions/newaccount/style.css">
+	<link rel="icon" href="https://interwebsa.com/favicon.ico">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+VIEW IN FULL SCREEN MODE
+FULL SCREEN MODE: http://salehriaz.com/404Page/404.html
+
+DRIBBBLE: https://dribbble.com/shots/4330167-404-Page-Lost-In-Space
+-->
+
+<body class="bg-purple">
+        
+        <div class="stars">
+            <div class="custom-navbar">
+                <div class="brand-logo"> <a href="https://interwebsa.com"><img src="https://interwebsa.com/img/header/logo-w.png" width="120px"></a>
+                </div>
+                <div class="navbar-links">
+                    <ul>
+                      <li><a href="https://interwebsa.com/billing/clientarea.php" class="btn-request" target="_blank">Start Building</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="central-body">
+                <h1 style="font-family: Dosis, sans-serif; font-weight: 900; color: #fff; font-size: 42px;">Welcome to Your New InterWeb SA Account</h1>
+                <a href="https://interwebsa.com/billing/clientarea.php" class="btn-go-home" target="_blank">Go to Your Client Area</a>
+            </div>
+            <div class="objects">
+                <img class="object_rocket" src="https://interwebsa.com/accountfunctions/newaccount/rocket.svg" width="40px">
+                <div class="earth-moon">
+                    <img class="object_earth" src="https://interwebsa.com/accountfunctions/newaccount/earth.svg" width="100px">
+                    <img class="object_moon" src="https://interwebsa.com/accountfunctions/newaccount/moon.svg" width="80px">
+                </div>
+                <div class="box_astronaut">
+                    <img class="object_astronaut" src="https://interwebsa.com/accountfunctions/newaccount/astronaut.svg" width="140px">
+                </div>
+            </div>
+            <div class="glowing_stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+
+            </div>
+
+        </div>
+
+    </body>
+<!-- partial -->
+  <script  src="https://interwebsa.com/accountfunctions/newaccount/script.js"></script>
+
+</body>
+</html>

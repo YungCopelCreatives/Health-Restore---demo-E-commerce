@@ -1,0 +1,94 @@
+# Robots.txt for Health Restore
+# https://healthrestore.co.za/robots.txt
+
+User-agent: *
+Allow: /
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/temp-write-test-*
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /temp/
+
+# Disallow duplicate content
+Disallow: /*?
+Disallow: /*.pdf$
+Disallow: /search
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /my-account/
+
+# Allow access to CSS, JS, and images for proper rendering
+Allow: /wp-content/themes/
+Allow: /wp-content/plugins/
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.webp
+
+# Crawl delay to be respectful
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://healthrestore.co.za/sitemap.xml
+
+# Additional sitemaps for different content types
+Sitemap: https://healthrestore.co.za/sitemap-products.xml
+Sitemap: https://healthrestore.co.za/sitemap-categories.xml
+Sitemap: https://healthrestore.co.za/sitemap-blog.xml
+
+# Block unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Allow important bots with specific instructions
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.webp
+Allow: *.svg
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /blog/

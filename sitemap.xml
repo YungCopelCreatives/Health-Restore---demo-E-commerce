@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages Sitemap -->
+  <sitemap>
+    <loc>https://healthrestore.co.za/sitemap-main.xml</loc>
+    <lastmod>2024-12-12</lastmod>
+  </sitemap>
+
+  <!-- Products Sitemap -->
+  <sitemap>
+    <loc>https://healthrestore.co.za/sitemap-products.xml</loc>
+    <lastmod>2024-12-12</lastmod>
+  </sitemap>
+
+  <!-- Categories Sitemap -->
+  <sitemap>
+    <loc>https://healthrestore.co.za/sitemap-categories.xml</loc>
+    <lastmod>2024-12-12</lastmod>
+  </sitemap>
+
+  <!-- Blog Sitemap -->
+  <sitemap>
+    <loc>https://healthrestore.co.za/sitemap-blog.xml</loc>
+    <lastmod>2024-12-12</lastmod>
+  </sitemap>
+</sitemapindex>
 
   <!-- Homepage -->
   <url>
